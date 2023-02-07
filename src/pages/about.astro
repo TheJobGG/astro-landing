@@ -1,19 +1,10 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Player from "../components/landing/Player.astro";
-
-let params = Astro.url.searchParams;
-
-let name = params.get('name'); // is the string "Jonathan Smith".
-let age = params.get('age'); // is the number 18
 ---
 
 <Layout title="About">
   <h1 class="text-5xl text-center font-bold mb-7 ">About</h1>
-  <ul>
-    <li>Name: {name}</li>
-    <li>Age: {age}</li>
-  </ul>
   <p>
     Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatem, dicta?
     Officia nihil magnam, neque saepe consequuntur sunt nostrum quidem optio
