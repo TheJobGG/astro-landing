@@ -1,0 +1,54 @@
+---
+import "../styles/NavBar.css";
+
+const links = [
+  { title: "Home", link: "/" },
+  { title: "About", link: "/about" },
+];
+
+const url = Astro.url.pathname;
+---
+
+<nav
+  id="navbar"
+  class="sticky top-[-1px] w-full flex items-center justify-between py-3 pl-5 pr-10 bg-transparent text-gray-200 transition-all"
+>
+  <div class="icon">
+    <img src="favicon.svg" alt="" class="h-10 m-auto" />
+  </div>
+
+  <ul class="flex gap-5">
+    {
+      links.map((link) =>
+        url === link.link ? (
+          <a
+            href={link.link}
+            class="border-b-2 border-blue-800 hover:border-blue-500"
+          >
+            <li>{link.title}</li>
+          </a>
+        ) : (
+          <a href={link.link}>
+            <li>{link.title}</li>
+          </a>
+        )
+      )
+    }
+  </ul>
+</nav>
+
+<script>
+  const navBar = document.getElementById("navbar");
+  const initialCords = navBar!.getBoundingClientRect();
+  if (navBar) {
+    document.addEventListener("scroll", () => {
+      if (window.scrollY > (initialCords.top + 100)) {
+        /* navBar.classList.add("shadow-lg bg-[#002a3e]"); */
+        navBar.classList.add("bg-color");
+      } else {
+        /* navBar.classList.remove("shadow-lg bg-[#002a3e]"); */
+        navBar.classList.remove("bg-color");
+      }
+    });
+  }
+</script>

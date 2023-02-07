@@ -1,0 +1,12 @@
+---
+const response = await fetch('https://owen-wilson-wow-api.onrender.com/wows/random');
+const data = await response.json();
+---
+<h2 class="text-2xl mt-5 font-bold">Using an API</h2>
+<p>
+  Powered by <a href="https://owen-wilson-wow-api.onrender.com" target="_blank">https://owen-wilson-wow-api.onrender.com</a>.
+</p>
+
+<video autoplay controls width="600" class="mx-auto mt-5">
+  <source src={data[0].video['720p']} type="video/mp4">
+</video>

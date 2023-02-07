@@ -1,0 +1,31 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Player from "../components/landing/Player.astro";
+
+let params = Astro.url.searchParams;
+
+let name = params.get('name'); // is the string "Jonathan Smith".
+let age = params.get('age'); // is the number 18
+---
+
+<Layout title="About">
+  <h1 class="text-5xl text-center font-bold mb-7 ">About</h1>
+  <ul>
+    <li>Name: {name}</li>
+    <li>Age: {age}</li>
+  </ul>
+  <p>
+    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatem, dicta?
+    Officia nihil magnam, neque saepe consequuntur sunt nostrum quidem optio
+    illum laborum quia ratione beatae corrupti amet, enim quae error. Sunt sed
+    similique quis vero obcaecati non. Aliquid, quaerat, nihil nisi optio qui
+    suscipit ullam, officia aspernatur similique perspiciatis minima fugit alias
+    nesciunt quibusdam molestias ipsa reiciendis praesentium minus iste
+    explicabo deleniti nostrum. Error perspiciatis ipsam quibusdam quo. Porro
+    assumenda quidem suscipit corrupti excepturi quis a reprehenderit tempora
+    atque qui, provident voluptatum illum cupiditate repellendus accusamus
+    harum, deleniti temporibus unde sint omnis, repellat laborum adipisci vero
+    dolorem. Doloribus, dolor officia.
+  </p>
+  <Player />
+</Layout>

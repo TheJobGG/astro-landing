@@ -1,0 +1,14 @@
+.bg-color {
+  background-color: #002a3e;
+  padding: 0.75rem inherit;
+
+}
+
+
+
+@media (min-width: 768px) {
+  .bg-color {
+    padding-left: 2rem;
+    padding-right: 5rem;
+  }
+}
